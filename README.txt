@@ -1,1 +1,0 @@
-This will be a simple log of thoughts, issues, and concerns.
