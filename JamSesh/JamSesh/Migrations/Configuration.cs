@@ -5,14 +5,14 @@ namespace JamSesh.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<JamSesh69.Data_Access.JamSeshContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<JamSesh.Models.JamSeshContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(JamSesh69.Data_Access.JamSeshContext context)
+        protected override void Seed(JamSesh.Models.JamSeshContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -17,6 +17,7 @@ namespace JamSesh69.Models
         public string Title { get; set; }
         public Enums.SongType Type { get; set; }
         public string StreamUrl { get; set; }
+        public Playlist playlist { get; set; }
 
         public Song(string title, Enums.SongType type, string streamUrl)
         {

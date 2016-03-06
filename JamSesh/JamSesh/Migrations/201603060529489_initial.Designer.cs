@@ -13,7 +13,7 @@ namespace JamSesh.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201603050600551_initial"; }
+            get { return "201603060529489_initial"; }
         }
         
         string IMigrationMetadata.Source

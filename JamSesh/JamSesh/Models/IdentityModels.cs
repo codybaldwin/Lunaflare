@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using JamSesh69.Models;
 
 namespace JamSesh.Models
 {
@@ -28,6 +29,31 @@ namespace JamSesh.Models
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+        }
+    }
+
+    public class JamSeshContext : DbContext
+    {
+        public DbSet<Playlist> Playlists { get; set; }
+        public DbSet<Song> Songs { get; set; }
+        public DbSet<Jammer> Jammers { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer(new MyDbContextInitializer());
+
+            base.OnModelCreating(modelBuilder);
+        }
+
+    }
+
+    public class MyDbContextInitializer : DropCreateDatabaseIfModelChanges<JamSeshContext>
+    {
+        protected override void Seed(JamSeshContext dbContext)
+        {
+            // seed data
+
+            base.Seed(dbContext);
         }
     }
 }

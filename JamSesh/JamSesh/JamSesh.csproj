@@ -182,18 +182,18 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlaylistController.cs" />
     <Compile Include="Controllers\TrackController.cs" />
-    <Compile Include="Data Access\JamSeshContext.cs" />
     <Compile Include="Enums\Enums.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201603050600551_initial.cs" />
-    <Compile Include="Migrations\201603050600551_initial.Designer.cs">
-      <DependentUpon>201603050600551_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201603060529489_initial.cs" />
+    <Compile Include="Migrations\201603060529489_initial.Designer.cs">
+      <DependentUpon>201603060529489_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Jammer.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Playlist.cs" />
     <Compile Include="Models\Song.cs" />
@@ -452,6 +452,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Data Access\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -461,8 +462,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201603050600551_initial.resx">
-      <DependentUpon>201603050600551_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201603060529489_initial.resx">
+      <DependentUpon>201603060529489_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
