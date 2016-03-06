@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JamSesh69.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,12 +8,16 @@ using System.Web.Http;
 
 namespace JamSesh69.Controllers
 {
+    [RoutePrefix("api/Playlist")]
     public class PlaylistController : ApiController
     {
+        [Route("AddSong")]
         // GET api/PlayListController
-        public IEnumerable<string> Get()
+        [HttpPost]
+        public bool AddSong([FromBody] Song song)
         {
-            return new string[] { "value1", "value2" };
+
+            return false;
         }
 
         // GET api/<controller>/5

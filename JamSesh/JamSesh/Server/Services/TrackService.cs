@@ -39,13 +39,17 @@ namespace JamSesh.Server.Services
                     var dataObjects = response.Content.ReadAsAsync<IEnumerable<dynamic>>().Result;
                     foreach (var d in dataObjects)
                     {
-                        var song = new Song(d.title.Value, Enums.SongType.Soundcloud, d.stream_url.Value);
+                        var song = new Song(d.title.Value != null ? d.title.Value : "", Enums.SongType.Soundcloud, d.stream_url != null ? d.stream_url.Value : "");
                         songs.Add(song);
                     }
                 }
             }
 
             return songs;
+            //var serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            //string result = serializer.Serialize(songs);
+
+            //return result;
         }
     }
 }
